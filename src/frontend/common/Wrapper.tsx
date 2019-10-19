@@ -3,6 +3,11 @@ import { makeStyles } from "@material-ui/styles";
 
 import Link from "next/link";
 
+// pages/index.js
+import getConfig from "next/config";
+// Only holds serverRuntimeConfig and publicRuntimeConfig from next.config.js nothing else.
+const { publicRuntimeConfig } = getConfig();
+
 import {
   CssBaseline,
   AppBar,
@@ -128,7 +133,10 @@ function Wrapper(props: InterfaceProps) {
       >
         <div className={classes.toolbar}>
           <Link href={"/"}>
-            <img src="/static/images/1237117.png" alt="" />
+            <img
+              src={`${publicRuntimeConfig.staticFolder}/static/images/1237117.png`}
+              alt=""
+            />
           </Link>
         </div>
         <List>
