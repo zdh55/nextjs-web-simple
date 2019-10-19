@@ -28,6 +28,22 @@ npm run build
 npm run start
 ```
 
+##### 生产模式-导出静态页面
+
+`next export` 导出所有有可能渲染出的 HTML 内容，适用于静态app。
+
+```
+yarn build
+yarn export
+```
+
+或者
+
+```
+npm run build
+npm run export
+```
+
 
 ### update 2019-10-18
 
